@@ -1896,8 +1896,11 @@ def admin_update_status(oid):
 # ══════════════════════════════════════════
 #  MAIN
 # ══════════════════════════════════════════
+
+# Inicializa o banco sempre — funciona localmente e no Railway com Gunicorn
+init_db()
+
 if __name__=="__main__":
-    init_db()
     print("\n" + "="*56)
     print("  🛍️  M DE MARIA — rodando!")
     print("  👉  Acesse: http://localhost:5000")
